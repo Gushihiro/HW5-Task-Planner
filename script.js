@@ -17,10 +17,6 @@
     //then iterage over all hour elements
     //using an id/data attribute, determine what hour the current timeblock represents
     //if the current element time is less than moment time, it's grey
-var taskArray = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-var taskList = $(".textarea")
-console.log(taskArray)
-var saveBtn = $(".saveBtn")
 var saveBtn1 = $("#save1")
 var saveBtn2 = $("#save2")
 var saveBtn3 = $("#save3")
@@ -29,9 +25,11 @@ var saveBtn5 = $("#save5")
 var saveBtn6 = $("#save6")
 var saveBtn7 = $("#save7")
 var saveBtn8 = $("#save8")
-var saveBtn8 = $("#save9")
+var saveBtn9 = $("#save9")
+
 var currentTime = parseInt(moment().format("H"));
-console.log(currentTime)
+var currentDate = $("#currentDay")
+    currentDate.append(moment().format("dddd, MMMM Do"))
 
 var savedTask1 = localStorage.getItem("hour9")
     $("textarea#9").append(savedTask1)
@@ -40,17 +38,17 @@ var savedTask2 = localStorage.getItem("hour10")
 var savedTask3 = localStorage.getItem("hour11")
     $("textarea#11").append(savedTask3)
 var savedTask4 = localStorage.getItem("hour12")
-    $("textarea#11").append(savedTask4)
+    $("textarea#12").append(savedTask4)
 var savedTask5 = localStorage.getItem("hour13")
-    $("textarea#11").append(savedTask5)
+    $("textarea#13").append(savedTask5)
 var savedTask6 = localStorage.getItem("hour14")
-    $("textarea#11").append(savedTask6)
+    $("textarea#14").append(savedTask6)
 var savedTask7 = localStorage.getItem("hour15")
-    $("textarea#11").append(savedTask7)
+    $("textarea#15").append(savedTask7)
 var savedTask8 = localStorage.getItem("hour16")
-    $("textarea#11").append(savedTask8)
+    $("textarea#16").append(savedTask8)
 var savedTask9 = localStorage.getItem("hour17")
-    $("textarea#11").append(savedTask9)
+    $("textarea#17").append(savedTask9)
 function assignTimePast() {
     if (parseInt($("#9").attr("id")) < currentTime) {
         $("textarea#9").attr("class", "past col-10")
