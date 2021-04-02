@@ -1,22 +1,3 @@
-//Day Planner Homework
-//Setup HTML
-//Get bootstrap cdn links (css and JS cdn link from docs)
-//Layout the HTML
-    //add a jumbotron that displays current day and date (e.g. Wed, Mar 31st)
-//Create rows for hours of the day (9am-5pm)
-    //hours div / text input / save button(bootstrap icons cdn)
-//Start JavaScript
-    //Create a click event on the save buttons
-    //using event.target, save content of textarea.val() to local storage
-    //also grab unique identifier for placing the hour input value into localStorage
-
-// on pageload, pull all data from local storage and use unique label/indentifier to determine where to put the value
-
-    //for determing css bacgrkoundcolor: "
-    //use moment to get the current time (specifically the hour)
-    //then iterage over all hour elements
-    //using an id/data attribute, determine what hour the current timeblock represents
-    //if the current element time is less than moment time, it's grey
 var saveBtns = [
     $("#save1"), $("#save2"), $("#save3"), 
     $("#save4"), $("#save5"), $("#save6"), 
@@ -70,3 +51,23 @@ for (let i = 0; i < saveBtns.length; i++) {
 }
 
 assignTime();
+
+//Day Planner Homework
+//Setup HTML
+//Get bootstrap cdn links (css and JS cdn link from docs)
+//Layout the HTML
+    //add a jumbotron that displays current day and date (e.g. Wed, Mar 31st)
+//Create rows for hours of the day (9am-5pm)
+    //hours div / text input / save button(bootstrap icons cdn)
+//Start JavaScript
+    //Create a click event on the save buttons
+    //using event.target, save content of textarea.val() to local storage
+    //also grab unique identifier for placing the hour input value into localStorage
+
+// on pageload, pull all data from local storage and use unique label/indentifier to determine where to put the value
+
+    //for determing css bacgrkoundcolor: "
+    //use moment to get the current time (specifically the hour)
+    //then iterage over all hour elements
+    //using an id/data attribute, determine what hour the current timeblock represents
+    //if the current element time is less than moment time, it's grey
