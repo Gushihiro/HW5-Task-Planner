@@ -21,13 +21,36 @@ var taskArray = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 var taskList = $(".textarea")
 console.log(taskArray)
 var saveBtn = $(".saveBtn")
+var saveBtn1 = $("#save1")
+var saveBtn2 = $("#save2")
+var saveBtn3 = $("#save3")
+var saveBtn4 = $("#save4")
+var saveBtn5 = $("#save5")
+var saveBtn6 = $("#save6")
+var saveBtn7 = $("#save7")
+var saveBtn8 = $("#save8")
+var saveBtn8 = $("#save9")
 var currentTime = parseInt(moment().format("H"));
 console.log(currentTime)
-//var saveTask = function(event) {
-    //event.target.
 
-//saveBtn.on("click", )
-
+var savedTask1 = localStorage.getItem("hour9")
+    $("textarea#9").append(savedTask1)
+var savedTask2 = localStorage.getItem("hour10")
+    $("textarea#10").append(savedTask2)
+var savedTask3 = localStorage.getItem("hour11")
+    $("textarea#11").append(savedTask3)
+var savedTask4 = localStorage.getItem("hour12")
+    $("textarea#11").append(savedTask4)
+var savedTask5 = localStorage.getItem("hour13")
+    $("textarea#11").append(savedTask5)
+var savedTask6 = localStorage.getItem("hour14")
+    $("textarea#11").append(savedTask6)
+var savedTask7 = localStorage.getItem("hour15")
+    $("textarea#11").append(savedTask7)
+var savedTask8 = localStorage.getItem("hour16")
+    $("textarea#11").append(savedTask8)
+var savedTask9 = localStorage.getItem("hour17")
+    $("textarea#11").append(savedTask9)
 function assignTimePast() {
     if (parseInt($("#9").attr("id")) < currentTime) {
         $("textarea#9").attr("class", "past col-10")
@@ -139,8 +162,66 @@ function assignTimeFuture() {
         $("textarea#17").attr("class", "future col-10")
     }
 }
+
+function saveTask1() {
+    localStorage.setItem("hour9", $("textarea#9").val())
+}
+function saveTask2() {
+    localStorage.setItem("hour10", $("textarea#10").val())
+}
+function saveTask3() {
+    localStorage.setItem("hour11", $("textarea#11").val())
+}
+function saveTask4() {
+    localStorage.setItem("hour12", $("textarea#12").val())
+}
+function saveTask5() {
+    localStorage.setItem("hour13", $("textarea#13").val())
+}
+function saveTask6() {
+    localStorage.setItem("hour14", $("textarea#14").val())
+}
+function saveTask7() {
+    localStorage.setItem("hour15", $("textarea#15").val())
+}
+function saveTask8() {
+    localStorage.setItem("hour16", $("textarea#16").val())
+}
+function saveTask9() {
+    localStorage.setItem("hour17", $("textarea#17").val())
+}
+
+saveBtn1.on("click", function() {
+   saveTask1();
+})
+saveBtn2.on("click", function() {
+    saveTask2();
+})
+saveBtn3.on("click", function() {
+    saveTask3();
+})
+saveBtn4.on("click", function() {
+    saveTask4();
+})
+saveBtn5.on("click", function() {
+    saveTask5();
+})
+saveBtn6.on("click", function() {
+    saveTask6();
+})
+saveBtn7.on("click", function() {
+    saveTask7();
+})
+saveBtn8.on("click", function() {
+    saveTask8();
+})
+saveBtn9.on("click", function() {
+    saveTask9();
+})
+
 assignTimePast();
 assignTimePresent();
 assignTimeFuture();
-console.log($("textarea#0"))
-console.log(parseInt($("#9").attr("id")))
+
+
+console.log(localStorage)
